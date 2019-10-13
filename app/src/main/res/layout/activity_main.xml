@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_weatherTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Weather Information"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_cityName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:hint="City Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/btn_getWeather"
+        app:layout_constraintStart_toStartOf="@+id/txt_weatherTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txt_weatherTitle" />
+
+    <Button
+        android:id="@+id/btn_getWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Weather"
+        app:layout_constraintBottom_toBottomOf="@+id/input_cityName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_weatherTitle"
+        app:layout_constraintTop_toTopOf="@+id/input_cityName" />
+
+    <TextView
+        android:id="@+id/txt_weatherResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="10sp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_getWeather"
+        app:layout_constraintStart_toStartOf="@+id/input_cityName"
+        app:layout_constraintTop_toBottomOf="@+id/input_cityName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
